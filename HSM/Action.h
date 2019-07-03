@@ -21,10 +21,7 @@ public:
 
 
 
-	void Act()
-	{
-		std::cout << "Data: " << m_nData << std::endl;
-	}
+	void Act();
 
 
 	virtual bool IsComplete();
@@ -81,7 +78,7 @@ public:
 
 
 
-
+#if 0
 class ActionManager
 {
 public:
@@ -103,3 +100,4 @@ public:
 };
 
 
+#endif

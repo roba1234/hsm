@@ -159,9 +159,11 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="SubMachineState.h" />
     <ClInclude Include="Transition.h" />
+    <ClInclude Include="UpdateResult.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Action.cpp" />
+    <ClCompile Include="HSM.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

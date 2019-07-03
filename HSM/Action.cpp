@@ -1,4 +1,8 @@
+#include "pch.h"
 #include "Action.h"
+
+
+
 
 Action* Action::GetLast()
 {
@@ -30,10 +34,12 @@ void Action::DeleteList()
 }
 
 
+
 void Action::Act()
 {
-	// Do nothing ...
+	std::cout << "Data: " << m_nData << std::endl;
 }
+
 
 
 bool Action::CanInterrupt()
@@ -42,10 +48,12 @@ bool Action::CanInterrupt()
 }
 
 
+
 bool Action::CanDoBoth(const Action* pOther) const
 {
 	return false;
 }
+
 
 
 bool Action::IsComplete()
@@ -54,12 +62,15 @@ bool Action::IsComplete()
 }
 
 
+#if 0
 ActionManager::ActionManager()
 	: m_nActivePriority(0)
 	, m_pActionQueue(nullptr)
 	, m_pActiveAction(nullptr)
 {
 }
+
+
 
 void ActionManager::ScheduleAction(Action* pNewAction)
 {
@@ -98,6 +109,7 @@ void ActionManager::Execute()
 }
 
 
+
 void ActionManager::CheckInterrupts()
 {
 	Action** previous = &m_pActionQueue;
@@ -112,7 +124,7 @@ void ActionManager::CheckInterrupts()
 
 		// Otherwise we're beating for priority, so check if we
 		// need to interrupt.
-		if (next->CanInterrupt()) 
+		if (next->CanInterrupt())
 		{
 
 			// So we have to interrupt. Initially just replace the
@@ -137,3 +149,6 @@ void ActionManager::CheckInterrupts()
 		previous = &next->m_pNext;
 		next = next->m_pNext;
 	}
+}
+#endif
+

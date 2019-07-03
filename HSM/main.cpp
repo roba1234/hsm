@@ -10,47 +10,6 @@ int main()
 {
 	std::cout << "Hello World!\n";
 
-	Action* ActionList = new Action(0);
-	Action* EntryActions = new Action(100);
-	Action* ExitActions = new Action(200);
-
-	for (int i = 1; i < 10; i++)
-	{
-		Action* pNode = new Action(i);
-		ActionList->pushback(pNode);
-	}
-	std::cout << " " << std::endl;
-
-	for (int i = 101; i < 110; i++)
-	{
-		Action* pNode = new Action(i);
-		EntryActions->pushback(pNode);
-	}
-	std::cout << " " << std::endl;
-
-	for (int i = 201; i < 210; i++)
-	{
-		Action* pNode = new Action(i);
-		ExitActions->pushback(pNode);
-	}
-
-	std::cout << " " << std::endl;
-
-	ActionList->DisplayList();
-	EntryActions->DisplayList();
-	ExitActions->DisplayList();
-
-	std::cout << " " << std::endl;
-
-	Action* MergedActions = new Action();
-	MergedActions->pushback(ActionList);
-	MergedActions->pushback(EntryActions);
-	MergedActions->pushback(ExitActions);
-
-	MergedActions->DisplayList();
-
-
-	int j = 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
